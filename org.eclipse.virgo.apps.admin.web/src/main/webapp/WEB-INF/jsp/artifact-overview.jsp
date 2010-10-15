@@ -23,6 +23,23 @@
 			return true;
 		}
 	}
+
+    function noop(event) { 
+		event.stopPropagation();
+		event.preventDefault();
+    }
+	
+    function drop(event) { 
+    	event.stopPropagation();
+    	event.preventDefault();
+    	if(event.dataTransfer.files.length > 1) {
+    		alert("Please only drop a single file.");
+    	} else {
+    		dojo.byId("deploy_application_file_field").value = event.dataTransfer.files[0].value;
+    	}
+    }
+
+	
 /* ]]> */
 </script>
 
@@ -30,18 +47,27 @@
 <form name="uploadForm" action="<c:url value="deploy.htm" />" method="post" enctype="multipart/form-data">
 	<table id="deploy_application" class="bordered-table">
 		<tr>
-			<th colspan="2">Select an artifact to upload and deploy to Virgo Web Server</th>
+			<th colspan="3">Select an artifact to upload and deploy to Virgo Web Server</th>
 		</tr>
 		<tr>
+			<td id="deploy_application_dragdrop"><div id="dropbox">Drop your files here.</div></td>
 			<td id="deploy_application_file" ><input id="deploy_application_file_field" type="file" name="application" size="80"/></td>
 			<td id="deploy_application_submit" ><input id="deploy_application_submit_button" type="submit" value="Upload" onclick="validateUploadForm"/></td>
 		</tr>
 	</table>     
 </form>
+
 <br/>
 
 <script type="text/javascript" language="Javascript">
 /* <![CDATA[ */
+	dojo.byId("dropbox").addEventListener("dragleave", noop, false);
+	dojo.byId("dropbox").addEventListener("dragenter", noop, false);
+	dojo.byId("dropbox").addEventListener("dragover", noop, false);
+	dojo.byId("dropbox").addEventListener("drop", drop, false);
+             
+             
+             
 	dojo.require("dijit.tree.ForestStoreModel");
 	dojo.require("dijit.Tree");
 	dojo.require("dojox.data.QueryReadStore");

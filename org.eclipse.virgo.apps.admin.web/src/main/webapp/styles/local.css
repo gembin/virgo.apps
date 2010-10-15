@@ -202,6 +202,22 @@ input, textarea, textfield {
 }
 
 /*
+ * DEPLOY APPLICATIONS BOX
+ */
+
+#deploy_application td {
+	vertical-align: middle;
+}
+
+#dropbox {
+	border: thin dashed;
+	height: 40px;
+	padding: 20px 3px 3px;
+	text-align: center;
+	width: 57px;
+}
+
+/*
  * DUMP TEXT BOX STYLE
  */
 .dumpSelector {
