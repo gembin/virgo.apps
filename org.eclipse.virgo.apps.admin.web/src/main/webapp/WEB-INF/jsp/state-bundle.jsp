@@ -185,7 +185,7 @@
 							<c:set var="provider" value=""/>
 						</c:when>
 						<c:otherwise>
-							<c:set var="provider" value="${require.provider.exportingBundle.bundleId} (${require.provider.exportingBundle.symbolicName} - ${require.provider.exportingBundle.version})"/>
+							<c:set var="provider" value="${require.provider.bundleId} (${require.provider.symbolicName} - ${require.provider.version})"/>
 						</c:otherwise>
 					</c:choose>
 		<!-- ROW COLOURING -->
@@ -195,7 +195,7 @@
 					</c:if>
 		<!-- DISPLAY THE NEXT ROW -->
 					<tr class="sublevel1-${rowStyle}">
-						<td><a href="<c:url value="bundle.htm?name=${require.requiredBundleName}&state=${state}" />">${require.requiredBundleName}</a></td>
+						<td><a href="<c:url value="bundle.htm?id=${require.provider.bundleId}&state=${state}" />">${require.requiredBundleName}</a></td>
 						<td>${require.versionConstraint}</td>
 						<td>${provider}</td>
 						<td>
