@@ -1,10 +1,10 @@
 # Compile
-org.eclipse.virgo.kernel=2.1.0.RELEASE
-org.eclipse.virgo.medic=2.1.0.RELEASE
-org.eclipse.virgo.osgi=2.1.0.RELEASE
-org.eclipse.virgo.repository=2.1.0.RELEASE
-org.eclipse.virgo.util=2.1.0.RELEASE
-org.eclipse.virgo.web=2.1.0.RELEASE
+org.eclipse.virgo.kernel=2.1.1.D-20110419082120
+org.eclipse.virgo.medic=2.1.1.D-20110419081325
+org.eclipse.virgo.osgi=2.1.1.D-20110419080526
+org.eclipse.virgo.repository=2.1.1.D-20110419081734
+org.eclipse.virgo.util=2.1.1.D-20110419080747
+org.eclipse.virgo.web=2.1.1.D-20110419084604
 org.eclipse.gemini.web=1.1.0.RELEASE
 javax.jms=1.1.0
 javax.annotation=1.0.0
@@ -29,9 +29,9 @@ org.springframework.osgi=1.2.1
 org.springframework=3.0.0.RELEASE
 
 # Test
-org.eclipse.virgo.teststubs=2.1.0.RELEASE
+org.eclipse.virgo.teststubs=2.1.1.D-20110419080319
 org.junit=4.7.0
 org.easymock=2.3.0
-org.eclipse.virgo.test=2.1.0.RELEASE
+org.eclipse.virgo.test=2.1.1.D-20110419081123
 
 
